@@ -9,7 +9,7 @@ Resource            SmokeTestKeywords.robot
 *** Variables ***
 # validEmail needs to be updated daily due to the website's account resets. This can be done by running the first test
 # and checking the log.
-${validEmail}       02162019.032839@test.com
+${validEmail}       02182019.101411@test.com
 ${validPassword}    jo(4Mh51K
 ${invalidPassword}  99999999
 
