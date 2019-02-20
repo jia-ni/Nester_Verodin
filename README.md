@@ -1,6 +1,6 @@
-#Verodin Project w/ Robot Framework
+# Verodin Project w/ Robot Framework
 
-##Introduction
+## Introduction
 The smoke tests for this project were created for http://automationpractice.com/ and
 were done using Robot Framework. Robot Framework is an open-source testing 
 framework that is primarily built on python and is intended to be used for GUI & 
@@ -10,7 +10,7 @@ instructions are specifically written for PyCharm.
 This readme gives an overview of how to use Robot Framework, but the [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 is a great resource when trying to find information that isn't covered in this write-up.
 
-#####Scope of Implemented Smoke Tests
+##### Scope of Implemented Smoke Tests
 Currently, the test cases live in SmokeTests.robot and the following 
 have been implemented:
 * Verify User Is Able To Create An Account
@@ -25,20 +25,20 @@ have been implemented:
 A few tests were left out and are intended to be used as practice. These
 test cases are commented out at the bottom of SmokeTests.robot and are
 similar to those that have already been implemented.
-##Set Up
+## Set Up
 If everything was packaged together correctly, the Verodin project should already contain all of
 the necessary tools aside from PyCharm and the ChromeDriver. In that case, only the PyCharm
 and ChromeDrive sections of the Set Up are necessary, but it is worth reading the installation
 steps for the Robot Framework Plugin, External Tools and Zoomba library to verify this.
-#####PyCharm
+##### PyCharm
 Download PyCharm [here](https://www.jetbrains.com/pycharm/download/#section=windows)
 and follow the installation instructions.
-#####ChromeDriver
+##### ChromeDriver
 In order for the GUI tests to work, the ChromeDriver needs to be downloaded and added to PATH. 
 ChromeDriver can be downloaded [here](https://sites.google.com/a/chromium.org/chromedriver/).
 Then follow [these instructions](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables)
 to add chromedriver.exe to PATH.
-#####Robot Framework Plugin
+##### Robot Framework Plugin
 With the Verodin project open, go to: _File > Settings > Plugins_ then search for and install 
 *Robot Framework Support*. The search results should show four items, but only 
 _Robot Framework Support_ is needed.
@@ -56,15 +56,15 @@ Next, add this tool:
 * Program: $PyInterpreterDirectory$/python
 * Arguments: -m robot -d Results $FileName$
 * Working Directory: $FileDir$
-#####The Zoomba Library
+##### The Zoomba Library
 The Zoomba library adds several keywords to Robot which allow for more reliable
 testing. To install the Zoomba library:
 Go to: _File > Settings > Project: Verodin > Project Interpreter_.
 In the top right corner of the window, click on the Add button (Alt+Insert) and
 search for *robotframework-zoomba* then click install. There should only be one 
 result, which is on version 1.6.4.
-##Writing & Running Test Cases
-#####Test Cases
+## Writing & Running Test Cases
+##### Test Cases
 Test cases in Robot Framework have the following format:
 
 ```robotframework
@@ -83,7 +83,7 @@ in more detail in the Test Suite section.
 To run the test:
 1. Highlight the test's name.
 2. _Right Click in the editor > External Tools > Robot_
-#####Keywords
+##### Keywords
 Keywords are the functions that make up a test. Keywords are defined in a section
 of the .robot file which has the header *** Keywords ***. Keywords are generally
 made up of other keywords, including built-in and user defined keywords, but can 
@@ -107,7 +107,7 @@ found in the following links:
 * [Robot Framework Build In](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Variable)
 * [Selenium2Library](http://robotframework.org/Selenium2Library/Selenium2Library.html)
 * [Zoomba](https://github.com/Accruent/zoomba/tree/master/src/Zoomba)
-#####Variables
+##### Variables
 There are three different types of variables in robot framework: Scalars, Lists and
 Dictionaries. Variables can be defined with the following format:
 ```robotframework
@@ -128,7 +128,7 @@ Variable Keyword
     Log         &{var3}
 ```
 More information on variables can be found [here](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Variable).
-#####Test Suites
+##### Test Suites
 Test suites are .robot files that bring everything together. To run an entire test
 suite:
 
