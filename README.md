@@ -31,7 +31,7 @@ have been implemented:
 * Verify User Can Access Dresses Page
 * Verify User Can Add Item To Cart From Dresses Page
 
-A few tests were left out and are intended to be used as practice. These
+Several tests were left out and are intended to be used as practice. These
 test cases are commented out at the bottom of SmokeTests.robot and are
 similar to those that have already been implemented.
 ## Set Up
@@ -48,8 +48,8 @@ ChromeDriver can be downloaded [here](https://sites.google.com/a/chromium.org/ch
 Then follow [these instructions](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables)
 to add chromedriver.exe to PATH.
 #### Robot Framework Plugin
-With the Verodin project open, go to: _File > Settings > Plugins_ then search for and install 
-*Robot Framework Support*. The search results should show four items, but only 
+With the Verodin project open in PyCharm, go to: _File > Settings > Plugins_ then search for and 
+install *Robot Framework Support*. The search results should show four items, but only 
 _Robot Framework Support_ is needed.
 
 Next, create the tools used to run the tests. Go to: 
