@@ -26,11 +26,20 @@ A few tests were left out and are intended to be used as practice. These
 test cases are commented out at the bottom of SmokeTests.robot and are
 similar to those that have already been implemented.
 ##Set Up
-#####Pycharm
-Download pycharm [here](https://www.jetbrains.com/pycharm/download/#section=windows)
+If everything was packaged together correctly, the Verodin project should already contain all of
+the necessary tools aside from PyCharm and the ChromeDriver. In that case, only the PyCharm
+and ChromeDrive sections of the Set Up are necessary, but it is worth reading the installation
+steps for the Robot Framework Plugin, External Tools and Zoomba library to verify this.
+#####PyCharm
+Download PyCharm [here](https://www.jetbrains.com/pycharm/download/#section=windows)
 and follow the installation instructions.
+#####ChromeDriver
+In order for the GUI tests to work, the ChromeDriver needs to be downloaded and added to PATH. 
+ChromeDriver can be downloaded [here](https://sites.google.com/a/chromium.org/chromedriver/).
+Then follow [these instructions](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables)
+to add chromedriver.exe to PATH.
 #####Robot Framework Plugin
-In PyCharm, go to: _File > Settings > Plugins_ then search for and install 
+With the Verodin project open, go to: _File > Settings > Plugins_ then search for and install 
 *Robot Framework Support*. The search results should show four items, but only 
 _Robot Framework Support_ is needed.
 
@@ -50,18 +59,10 @@ Next, add this tool:
 #####The Zoomba Library
 The Zoomba library adds several keywords to Robot which allow for more reliable
 testing. To install the Zoomba library:
-Go to: _File > Settings > Project: [Project Name] > Project Interpreter_.
+Go to: _File > Settings > Project: Verodin > Project Interpreter_.
 In the top right corner of the window, click on the Add button (Alt+Insert) and
 search for *robotframework-zoomba* then click install. There should only be one 
 result, which is on version 1.6.4.
-#####ChromeDriver
-The final step is downloading the ChromeDriver and adding it to PATH. ChromeDriver
-can be downloaded [here](https://sites.google.com/a/chromium.org/chromedriver/).
-Then follow [these instructions](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables)
-to add chromedriver.exe to PATH.
-#####The Verodin Project
-The Verodin PyCharm project is now ready to be opened from PyCharm 
-and the test cases can be executed.
 ##Writing & Running Test Cases
 #####Test Cases
 Test cases in Robot Framework have the following format:
@@ -85,12 +86,12 @@ To run the test:
 #####Keywords
 Keywords are the functions that make up a test. Keywords are defined in a section
 of the .robot file which has the header *** Keywords ***. Keywords are generally
-made up of other keywords, including built-in keywords, but can also be created
-using python or java. See [this page](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-libraries)
+made up of other keywords, including built-in and user defined keywords, but can 
+also be created using python or java. See [this page](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-libraries)
 for more information.
 
-In the following example, the keyword opens a browser, navigates to the url that 
-it takes as an argument, then closes the browser.
+In the following example, the *Navigate To Homepage* keyword opens a browser, navigates to the 
+url that it takes as an argument, then closes the browser.
 ```robotframework
 *** Keywords ***
 Navigate To Homepage
@@ -102,6 +103,7 @@ Navigate To Homepage
 This keyword can then be called by any test cases that also live in the same
 .robot file. More information on keywords, and a list of built in keywords can be
 found in the following links:
+* [Creating User Keywords](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords)
 * [Robot Framework Build In](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Variable)
 * [Selenium2Library](http://robotframework.org/Selenium2Library/Selenium2Library.html)
 * [Zoomba](https://github.com/Accruent/zoomba/tree/master/src/Zoomba)
