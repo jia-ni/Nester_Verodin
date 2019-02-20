@@ -20,8 +20,8 @@ In the case of automationpractice.com, the website acts as a clothing retail sto
 functions of this website are the various webpages, ability to create a new account,
 ability to sign in/out of an account and the shopping cart.
 
-Currently, the test cases live in SmokeTests.robot and the following 
-have been implemented:
+Currently, the test cases live in *Nester_Verodin/SmokeTests/SmokeTests.robot* 
+and the following have been implemented:
 * Verify User Is Able To Create An Account
 * Verify Valid User Can Sign In
 * Verify User Cannot Sign In With Invalid Credentials
@@ -48,7 +48,7 @@ ChromeDriver can be downloaded [here](https://sites.google.com/a/chromium.org/ch
 Then follow [these instructions](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables)
 to add chromedriver.exe to PATH.
 #### Robot Framework Plugin
-With the Verodin project open in PyCharm, go to: _File > Settings > Plugins_ then search for and 
+With the Nester_Verodin project open in PyCharm, go to: _File > Settings > Plugins_ then search for and 
 install *Robot Framework Support*. The search results should show four items, but only 
 _Robot Framework Support_ is needed.
 
@@ -68,7 +68,7 @@ Next, add this tool:
 #### The Zoomba Library
 The Zoomba library adds several keywords to Robot which allow for more reliable
 testing. To install the Zoomba library:
-Go to: _File > Settings > Project: Verodin > Project Interpreter_.
+Go to: *File > Settings > Project: Nester_Verodin > Project Interpreter*.
 In the top right corner of the window, click on the Add button (Alt+Insert) and
 search for *robotframework-zoomba* then click install. There should only be one 
 result, which is on version 1.6.4.
