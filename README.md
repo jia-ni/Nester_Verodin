@@ -11,6 +11,15 @@ This readme gives an overview of how to use Robot Framework, but the [Robot Fram
 is a great resource when trying to find information that isn't covered in this write-up.
 
 #### Scope of Implemented Smoke Tests
+The purpose of smoke tests is to ensure that the basic functions of the platform are accessible.
+If the smoke tests pass, then it is worth continuing testing at a more detailed level. However,
+if the smoke tests fail, then the product doesn't function properly at the most basic level and
+therefore the build is in too poor of a state to continue testing.
+
+In the case of automationpractice.com, the website acts as a clothing retail store. The major
+functions of this website are the various webpages, ability to create a new account,
+ability to sign in/out of an account and the shopping cart.
+
 Currently, the test cases live in SmokeTests.robot and the following 
 have been implemented:
 * Verify User Is Able To Create An Account
@@ -29,7 +38,7 @@ similar to those that have already been implemented.
 If everything was packaged together correctly, the Verodin project should already contain all of
 the necessary tools aside from PyCharm and the ChromeDriver. In that case, only the PyCharm
 and ChromeDrive sections of the Set Up are necessary, but it is worth reading the installation
-steps for the Robot Framework Plugin, External Tools and Zoomba library to verify this.
+steps for the Robot Framework Plugin, External Tools and Zoomba library sections to verify this.
 #### PyCharm
 Download PyCharm [here](https://www.jetbrains.com/pycharm/download/#section=windows)
 and follow the installation instructions.
